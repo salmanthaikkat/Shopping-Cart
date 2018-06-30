@@ -1,0 +1,15 @@
+<%- include('../_layouts/adminheader') %>
+
+
+<div class="container">
+  <h2 class="page-title">Delete Page</h2>
+  <a href="/admin/pages" class="btn btn-primary">Back to all Pages</a>
+  <h3>Are you sure to delete <%=title%> Page?</h3>
+  <form method="post" action="/admin/pages/delete-page/<%=id%>">
+    <button class="btn btn-danger">Delete Page</button>
+    <a href="/admin/pages" class="btn btn-primary">Cancel</a>
+  </form>
+</div>
+
+
+<%- include('../_layouts/adminfooter') %>
