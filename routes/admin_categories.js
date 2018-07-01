@@ -1,5 +1,4 @@
 var express = require('express');
-const { check, validationResult } = require('express-validator/check');
 var Category=require('../models/categories');
 var router = express.Router();
 
