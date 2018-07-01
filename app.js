@@ -11,7 +11,8 @@ const { check, validationResult } = require('express-validator/check');
 var config = require('./config');
 
 var indexRouter = require('./routes/index');
-var adminRouter = require('./routes/admin_pages');
+var adminPageRouter = require('./routes/admin_pages');
+var adminCategoryRouter = require('./routes/admin_categories');
 //var usersRouter = require('./routes/users');
 
 mongoose.connect(config.database);
@@ -51,7 +52,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/admin/pages',adminRouter);
+app.use('/admin/pages',adminPageRouter);
+app.use('/admin/categories',adminCategoryRouter);
 //app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
