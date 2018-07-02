@@ -1,0 +1,41 @@
+<%- include('../_layouts/adminheader') %>
+
+
+<div class="container">
+  <h2 class="page-title">Edit a Product</h2>
+  <a href="/admin/products" class="btn btn-primary">Back to all Products</a>
+  <form method="post" action="/admin/products/edit-product/<%=id%>" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="">Title</label>
+      <input type="text" class="form-control" placeholder="Title" value="<%=title%>" name="title">
+    </div>
+    <div class="form-group">
+      <label for="">Description</label>
+      <textarea cols="30" rows="10" class="form-control" placeholder="Description" name="desc">
+        <%=desc%>
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label for="">Price</label>
+      <input type="text" class="form-control" placeholder="Price" value="<%=price%>" name="price">
+    </div>
+    <div class="form-group">
+      <label for="">Category</label>
+      <select name="category" class="form-control">
+        <% categories.forEach((category)=>{ %>
+          <option value="<%=category.title%>"><%=category.title%></option>
+        <% }); %>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="">Image</label>
+      <input type="file" name="image" class="form-control" id="img">
+    </div>
+    <button class="btn btn-primary">Edit Product</button>
+  </form>
+</div>
+
+
+
+
+<%- include('../_layouts/adminfooter') %>
