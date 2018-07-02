@@ -7,7 +7,7 @@ var productSchema=new Schema({
     required:true
   },
   desc:{
-    tpe:String,
+    type:String,
     required:true
   },
   category:{
