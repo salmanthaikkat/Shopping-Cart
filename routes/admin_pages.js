@@ -1,5 +1,4 @@
 var express = require('express');
-const { check, validationResult } = require('express-validator/check');
 var Page=require('../models/page');
 var router = express.Router();
 
