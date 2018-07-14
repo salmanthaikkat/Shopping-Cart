@@ -81,6 +81,13 @@ router.post('/add-product',(req,res)=>{
     }
   });
 
+
+router.get('/edit-product/:id',(req,res)=>{
+  var id=req.params.id;
+
+});
+
+
 });
 
 module.exports=router;
